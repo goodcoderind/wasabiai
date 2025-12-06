@@ -28,7 +28,7 @@ export default function LeadersSay() {
             transition={{ duration: 0.6 }}
             className="glass-strong p-8 rounded-2xl relative mb-8"
           >
-            <div className="text-6xl text-electric-green opacity-50 absolute top-4 left-4">{`"`}</div>
+            <div className="text-6xl text-electric-green opacity-50 absolute top-4 left-4">&quot;</div>
             <p className="text-white text-lg md:text-xl leading-relaxed mb-6 relative z-10 pl-8">
               Testimonial from industry leader goes here.
             </p>

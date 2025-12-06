@@ -38,7 +38,7 @@ export default function IndustryTestimonials() {
               whileHover={{ scale: 1.02, y: -5 }}
               className="glass-strong p-8 rounded-2xl relative"
             >
-              <div className="text-6xl text-electric-green opacity-50 absolute top-4 left-4">{`"`}</div>
+              <div className="text-6xl text-electric-green opacity-50 absolute top-4 left-4">&quot;</div>
               <p className="text-white text-lg md:text-xl leading-relaxed mb-6 relative z-10 pl-8">
                 {testimonial.quote}
               </p>

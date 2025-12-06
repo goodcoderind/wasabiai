@@ -26,10 +26,10 @@ export default function OurStory() {
               </p>
               <p>
                 Founded by a team of AI champions, educators, and innovators, WasabiAI set out to democratize AI education. 
-                {`We don't just teach tools; we build creators, thinkers, and leaders.`}
+                We don&apos;t just teach tools; we build creators, thinkers, and leaders.
               </p>
               <p>
-                {`Today, we've empowered thousands of students across India, helping them build real projects, gain recognition,`} 
+                Today, we&apos;ve empowered thousands of students across India, helping them build real projects, gain recognition, 
                 and step confidently into an AI-first world.
               </p>
             </div>

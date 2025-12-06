@@ -76,7 +76,7 @@ export default function ContactForm() {
             >
               <CheckCircle className="text-electric-green mx-auto mb-4" size={64} />
               <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
-              <p className="text-slate">{`We'll get back to you soon.`}</p>
+              <p className="text-slate">We&apos;ll get back to you soon.</p>
             </motion.div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
