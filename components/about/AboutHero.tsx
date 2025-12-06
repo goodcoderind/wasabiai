@@ -24,7 +24,7 @@ export default function AboutHero() {
           transition={{ duration: 0.8 }}
           className="text-5xl md:text-7xl font-black mb-6"
         >
-          Building India's AI-First Generation
+          {`Building India's AI-First Generation`}
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 30 }}

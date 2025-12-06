@@ -52,7 +52,7 @@ export default function ProgramDetails() {
               <span className="text-slate line-through text-xl mr-2">₹999</span>
               <span className="text-5xl font-black text-electric-green">₹499</span>
             </div>
-            <p className="text-electric-green text-sm">(Today's discount)</p>
+            <p className="text-electric-green text-sm">{`(Today's discount)`}</p>
           </div>
 
           <p className="text-slate text-center mb-8 text-lg">

@@ -57,7 +57,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-4 md:mb-6 leading-tight px-4"
         >
-          <span className="text-white block mb-2 md:mb-3">Your report card won't matter in ten years</span>
+          <span className="text-white block mb-2 md:mb-3">{`Your report card won't matter in ten years`}</span>
           <span className="bg-electric-green text-black block px-3 md:px-4 py-1 md:py-2 inline-block">But your AI Skill will.</span>
         </motion.h1>
 
@@ -67,7 +67,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-slate text-base md:text-lg lg:text-xl mb-6 md:mb-8 max-w-4xl mx-auto font-bold px-4"
         >
-          <span className="inline-block">India's most exciting AI learning experience for students in Grades 6 to 12</span>
+          <span className="inline-block">{`India's most exciting AI learning experience for students in Grades 6 to 12`}</span>
         </motion.p>
 
         {/* Info Cards */}

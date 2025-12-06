@@ -31,11 +31,11 @@ export default function SamAltmanFeature() {
           className="max-w-4xl mx-auto text-center mb-8"
         >
           <p className="text-slate text-lg mb-6">
-            When Wasabi co-founder Abhra K Dubey met Sam Altman, CEO of OpenAI, Sam appreciated Wasabi's vision and said:
+            {`When Wasabi co-founder Abhra K Dubey met Sam Altman, CEO of OpenAI, Sam appreciated Wasabi's vision and said:`}
           </p>
           <div className="glass-strong p-8 rounded-2xl">
             <p className="text-3xl md:text-4xl font-black text-electric-green">
-              "What Wasabi is doing is truly needed."
+              {`"What Wasabi is doing is truly needed."`}
             </p>
           </div>
         </motion.div>

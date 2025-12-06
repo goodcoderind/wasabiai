@@ -50,7 +50,7 @@ export default function FinalCTA() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-slate text-lg md:text-xl mb-12"
         >
-          Join 1000+ students who've already started their journey
+          {`Join 1000+ students who've already started their journey`}
         </motion.p>
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
