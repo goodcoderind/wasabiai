@@ -58,7 +58,7 @@ export default function Hero() {
           className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-4 md:mb-6 leading-tight px-4"
         >
           <span className="text-white block mb-2 md:mb-3">Your report card won&apos;t matter in ten years</span>
-          <span className="bg-electric-green text-black block px-3 md:px-4 py-1 md:py-2 inline-block">But your AI Skill will.</span>
+          <span className="text-electric-green block">But your AI Skill will.</span>
         </motion.h1>
 
         <motion.p
@@ -108,7 +108,16 @@ export default function Hero() {
                   <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-electric-green/10 border-2 border-electric-green/40 flex items-center justify-center mb-4 group-hover:bg-electric-green/20 group-hover:border-electric-green/60 transition-all duration-300">
                     <Icon size={24} className="text-electric-green" strokeWidth={2} />
                   </div>
-                  <p className="text-white font-black text-lg md:text-xl mb-1.5">{card.label}</p>
+                  {card.label === '₹499' ? (
+                    <div className="mb-1.5">
+                      <div className="flex items-center justify-center gap-2">
+                        <span className="text-slate line-through text-sm md:text-base font-semibold">₹999</span>
+                        <span className="text-electric-green font-black text-lg md:text-xl">₹499</span>
+                      </div>
+                    </div>
+                  ) : (
+                    <p className="text-white font-black text-lg md:text-xl mb-1.5">{card.label}</p>
+                  )}
                   <p className="text-slate text-xs md:text-sm font-semibold">{card.sublabel}</p>
                 </div>
               </motion.div>
