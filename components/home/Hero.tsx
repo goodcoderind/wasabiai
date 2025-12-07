@@ -12,7 +12,7 @@ export default function Hero() {
   })
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-12 md:py-16">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-8 md:py-12">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-black via-charcoal to-black">
         <div className="absolute inset-0">
@@ -44,9 +44,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="mb-6 md:mb-8 mt-4 md:mt-6"
+          className="mb-3 md:mb-4 mt-2 md:mt-4"
         >
-          <p className="text-lg md:text-2xl lg:text-3xl tracking-[0.1em] text-white font-bold">
+          <p className="text-sm md:text-lg lg:text-xl tracking-[0.1em] text-white font-bold">
             WasabiAI Winter Camp
           </p>
         </motion.div>
@@ -55,17 +55,21 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-4 md:mb-6 leading-tight px-4"
+          className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-3 md:mb-4 leading-tight px-4"
         >
-          <span className="text-white block mb-2 md:mb-3">Your report card won&apos;t matter in ten years</span>
-          <span className="text-electric-green block">But your AI Skill will.</span>
+          <div className="text-white block mb-1.5 md:mb-2">
+            Your report card won&apos;t matter in ten&nbsp;years
+          </div>
+          <div className="text-electric-green block">
+            But your AI Skill will.
+          </div>
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-slate text-base md:text-lg lg:text-xl mb-6 md:mb-8 max-w-4xl mx-auto font-bold px-4"
+          className="text-slate text-sm md:text-base lg:text-lg mb-4 md:mb-6 max-w-3xl mx-auto font-semibold px-4"
         >
           <span className="inline-block">India&apos;s most exciting AI learning experience for students in Grades 6 to 12</span>
         </motion.p>
@@ -75,7 +79,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="flex flex-wrap justify-center gap-4 md:gap-6 mb-8 md:mb-10"
+          className="flex flex-wrap justify-center gap-3 md:gap-4 mb-5 md:mb-6"
         >
           {[
             { 
@@ -102,23 +106,23 @@ export default function Hero() {
                 animate={inView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.5, delay: 0.7 + i * 0.1 }}
                 whileHover={{ scale: 1.05, y: -5 }}
-                className="glass-strong border-2 border-electric-green/30 rounded-2xl px-6 md:px-8 py-6 md:py-7 min-w-[140px] md:min-w-[170px] group hover:border-electric-green/60 hover:shadow-[0_0_30px_rgba(15,255,103,0.2)] transition-all duration-300"
+                className="glass-strong border-2 border-electric-green/30 rounded-xl px-4 md:px-6 py-4 md:py-5 min-w-[120px] md:min-w-[140px] group hover:border-electric-green/60 hover:shadow-[0_0_30px_rgba(15,255,103,0.2)] transition-all duration-300"
               >
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-electric-green/10 border-2 border-electric-green/40 flex items-center justify-center mb-4 group-hover:bg-electric-green/20 group-hover:border-electric-green/60 transition-all duration-300">
-                    <Icon size={24} className="text-electric-green" strokeWidth={2} />
+                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg bg-electric-green/10 border-2 border-electric-green/40 flex items-center justify-center mb-3 group-hover:bg-electric-green/20 group-hover:border-electric-green/60 transition-all duration-300">
+                    <Icon size={20} className="text-electric-green" strokeWidth={2} />
                   </div>
                   {card.label === '₹499' ? (
-                    <div className="mb-1.5">
-                      <div className="flex items-center justify-center gap-2">
-                        <span className="text-slate line-through text-sm md:text-base font-semibold">₹999</span>
-                        <span className="text-electric-green font-black text-lg md:text-xl">₹499</span>
+                    <div className="mb-1">
+                      <div className="flex items-center justify-center gap-1.5">
+                        <span className="text-slate line-through text-xs md:text-sm font-semibold">₹999</span>
+                        <span className="text-electric-green font-black text-base md:text-lg">₹499</span>
                       </div>
                     </div>
                   ) : (
-                    <p className="text-white font-black text-lg md:text-xl mb-1.5">{card.label}</p>
+                    <p className="text-white font-black text-base md:text-lg mb-1">{card.label}</p>
                   )}
-                  <p className="text-slate text-xs md:text-sm font-semibold">{card.sublabel}</p>
+                  <p className="text-slate text-xs font-semibold">{card.sublabel}</p>
                 </div>
               </motion.div>
             )
@@ -129,9 +133,9 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={inView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 0.8, delay: 1 }}
-          className="mb-8 md:mb-12"
+          className="mb-4 md:mb-6"
         >
-          <Link href="/contact" className="btn-primary text-base md:text-lg px-8 md:px-10 py-3 md:py-4 inline-flex items-center gap-2">
+          <Link href="/contact" className="btn-primary text-sm md:text-base px-6 md:px-8 py-2.5 md:py-3 inline-flex items-center gap-2">
             Join the Movement →
           </Link>
         </motion.div>
