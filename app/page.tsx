@@ -22,12 +22,12 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <Hero />
+      <ToolsShowcase />
       <SecondaryHero />
       <CalloutSection />
       <WhatStudentsCreate />
       <CurriculumOverview />
       <DayByDayBreakdown />
-      <ToolsShowcase />
       <WhatStudentsGain />
       <LearningJourney />
       <WhyWasabiAI />
