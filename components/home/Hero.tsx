@@ -93,8 +93,8 @@ export default function Hero() {
               icon: Coins,
             },
             { 
-              label: 'Grades 6-12', 
-              sublabel: 'All Students Welcome',
+              label: 'Students & Young Professionals', 
+              sublabel: 'All Welcome',
               icon: GraduationCap,
             },
           ].map((card, i) => {
