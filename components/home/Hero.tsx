@@ -135,9 +135,14 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 1 }}
           className="mb-4 md:mb-6"
         >
-          <Link href="/contact" className="btn-primary text-sm md:text-base px-6 md:px-8 py-2.5 md:py-3 inline-flex items-center gap-2">
-            Join the Movement →
-          </Link>
+          <a 
+            href="https://forms.gle/13uqvzphfnQWAa6h6" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="btn-primary text-sm md:text-base px-6 md:px-8 py-2.5 md:py-3 inline-flex items-center gap-2"
+          >
+            Join the Movement (Enroll Now) →
+          </a>
         </motion.div>
       </div>
 
