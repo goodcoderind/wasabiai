@@ -60,7 +60,9 @@ export default function Navigation() {
             </Link>
           ))}
           <Link
-            href="/contact"
+            href="https://forms.gle/13uqvzphfnQWAa6h6"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-primary text-sm px-6 py-2"
           >
             Enroll Now
@@ -98,7 +100,9 @@ export default function Navigation() {
                 </Link>
               ))}
               <Link
-                href="/contact"
+                href="https://forms.gle/13uqvzphfnQWAa6h6"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setMobileMenuOpen(false)}
                 className="btn-primary text-sm px-6 py-2 w-fit"
               >

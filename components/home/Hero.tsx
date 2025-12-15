@@ -71,7 +71,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-slate text-sm md:text-base lg:text-lg mb-4 md:mb-6 max-w-3xl mx-auto font-semibold px-4"
         >
-          <span className="inline-block">India&apos;s most exciting AI learning experience for students in Grades 6 to 12</span>
+          <span className="inline-block">India&apos;s most exciting AI learning experience for students and young professional</span>
         </motion.p>
 
         {/* Info Cards */}
@@ -141,7 +141,7 @@ export default function Hero() {
             rel="noopener noreferrer"
             className="btn-primary text-sm md:text-base px-6 md:px-8 py-2.5 md:py-3 inline-flex items-center gap-2"
           >
-            Join the Movement (Enroll Now) →
+            Book Your Seat →
           </a>
         </motion.div>
       </div>

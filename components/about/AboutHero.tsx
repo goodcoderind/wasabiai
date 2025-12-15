@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
+import Image from 'next/image'
 
 export default function AboutHero() {
   const [ref, inView] = useInView({
@@ -12,8 +13,15 @@ export default function AboutHero() {
   return (
     <section ref={ref} className="min-h-[60vh] flex items-center justify-center bg-black relative overflow-hidden">
       <div className="absolute inset-0">
-        <div className="aspect-video w-full bg-charcoal glass flex items-center justify-center">
-          <span className="text-slate text-sm">Hero Image: Team or Students Working</span>
+        <div className="aspect-video w-full relative">
+          <Image
+            src="/people/OurTeam.jpeg"
+            alt="Team or Students Working"
+            fill
+            className="object-cover"
+            priority
+            unoptimized
+          />
         </div>
       </div>
       

@@ -1,13 +1,11 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Instagram, Linkedin, Twitter, Youtube } from 'lucide-react'
+import { Instagram, Linkedin } from 'lucide-react'
 
 export default function Footer() {
   const socialLinks = [
-    { icon: Instagram, href: '#', label: 'Instagram' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Youtube, href: '#', label: 'YouTube' },
+    { icon: Instagram, href: 'https://www.instagram.com/thewasabi.ai/', label: 'Instagram' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/abhradubey/', label: 'LinkedIn' },
   ]
 
   return (

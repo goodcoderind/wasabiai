@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
+import Image from 'next/image'
 
 export default function OurStory() {
   const [ref, inView] = useInView({
@@ -39,9 +40,16 @@ export default function OurStory() {
             initial={{ opacity: 0, x: 50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="aspect-square bg-black rounded-2xl glass flex items-center justify-center"
+            className="aspect-square bg-black rounded-2xl glass overflow-hidden"
           >
-            <span className="text-slate text-sm">Visual/Image Placeholder</span>
+            <Image
+              src="/people/OurTeam.jpeg"
+              alt="Our Story"
+              width={600}
+              height={600}
+              className="w-full h-full object-cover"
+              unoptimized
+            />
           </motion.div>
         </div>
       </div>
