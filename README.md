@@ -1,71 +1,73 @@
 # WasabiAI Winter Camp Website
 
-A hyper-modern, fully responsive multi-page website for WasabiAI Winter Camp with cutting-edge glassmorphism design, smooth animations, and a premium Gen-Z aesthetic.
+A Next.js and TypeScript frontend for the WasabiAI Winter Camp website. It presents the program, curriculum, team, and student projects through a responsive interface with a dark theme, green accents, and scroll animations.
 
-## 🚀 Features
+## Project status
 
-- **Glassmorphism Design**: Frosted glass effects with backdrop blur
-- **Smooth Animations**: Scroll-triggered animations using Framer Motion
-- **Custom Cursor**: Magnetic cursor effects on interactive elements
-- **Fully Responsive**: Mobile-first design that works on all devices
-- **Multi-page**: Homepage, About, Projects, Contact, Login, Signup, Referral
-- **Modern Tech Stack**: Next.js 14, TypeScript, Tailwind CSS
+This repository is a **frontend prototype**. Its public information pages and interactive components are implemented; account and submission workflows still need backend integration.
 
-## 🛠️ Tech Stack
+- **Login and signup:** UI forms only. They do not authenticate users or create accounts; the current submit handlers log form values to the browser console. Use sample details when previewing them.
+- **Contact form:** performs client-side validation and displays a success state, but does not send a message.
+- **Referrals:** uses a placeholder referral link and static statistics; tracking and rewards need backend support.
+- **Content and images:** review placeholder material before publishing a live camp website.
 
-- **Framework**: Next.js 14 (App Router)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **Animations**: Framer Motion
-- **Icons**: Lucide React
-- **Scroll Detection**: react-intersection-observer
+## Features
 
-## 📦 Installation
+- Home, About, Projects, Contact, Login, Signup, and Referral pages
+- Student project gallery with category filters
+- Reusable page sections and shared navigation/footer
+- Responsive layouts styled with Tailwind CSS
+- Scroll-triggered animations using Framer Motion
+- Desktop custom cursor and hover effects
 
-1. Install dependencies:
+## Tech stack
+
+| Area | Technology |
+| --- | --- |
+| Framework | Next.js 14, App Router |
+| Language | TypeScript |
+| Styling | Tailwind CSS |
+| Animation | Framer Motion |
+| Icons | Lucide React |
+| Scroll detection | react-intersection-observer |
+
+## Local development
+
 ```bash
+git clone https://github.com/goodcoderind/wasabiai.git
+cd wasabiai
 npm install
-```
-
-2. Run the development server:
-```bash
 npm run dev
 ```
 
-3. Open [http://localhost:3000](http://localhost:3000) in your browser
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## 🎨 Design System
+The scripts in `package.json` are:
 
-### Colors
-- **Primary Black**: `#000000`
-- **Pure White**: `#FFFFFF`
-- **Electric Green**: `#0FFF67`
-- **Charcoal Gray**: `#1A1A1A`
-- **Slate Gray**: `#808080`
+| Command | Purpose |
+| --- | --- |
+| `npm run dev` | Start the Next.js development server |
+| `npm run build` | Create a production build |
+| `npm start` | Serve the production build |
+| `npm run lint` | Run Next.js linting |
 
-### Typography
-- **Font**: Inter (Google Fonts)
-- **Weights**: 300, 400, 600, 700, 900
+## Pages
 
-### Glassmorphism
-- Background: `rgba(255, 255, 255, 0.05)` to `rgba(255, 255, 255, 0.1)`
-- Backdrop Filter: `blur(20px)` to `blur(30px)`
-- Border: `rgba(15, 255, 103, 0.2)` to `rgba(15, 255, 103, 0.3)`
+| Route | Content |
+| --- | --- |
+| `/` | Camp overview, curriculum, team, and student work |
+| `/about` | Story, values, and team |
+| `/projects` | Student project gallery with filters |
+| `/contact` | Contact information and a form prototype |
+| `/login` | Login form prototype |
+| `/signup` | Registration form prototype |
+| `/referral` | Referral UI with placeholder data |
 
-## 📁 Project Structure
+## Project structure
 
-```
-WASABIAI/
-├── app/
-│   ├── about/
-│   ├── contact/
-│   ├── login/
-│   ├── projects/
-│   ├── referral/
-│   ├── signup/
-│   ├── globals.css
-│   ├── layout.tsx
-│   └── page.tsx
+```text
+wasabiai/
+├── app/                 # App Router pages, shared layout, and global styles
 ├── components/
 │   ├── about/
 │   ├── auth/
@@ -77,76 +79,57 @@ WASABIAI/
 │   ├── Footer.tsx
 │   ├── LoadingScreen.tsx
 │   └── Navigation.tsx
+├── public/              # Public website assets
 ├── package.json
 ├── tailwind.config.ts
 └── tsconfig.json
 ```
 
-## 🎯 Pages
+## Design system
 
-- **Homepage** (`/`): Complete landing page with all sections
-- **About** (`/about`): Story, values, and team
-- **Projects** (`/projects`): Student project gallery with filters
-- **Contact** (`/contact`): Contact form with validation
-- **Login** (`/login`): User login page
-- **Signup** (`/signup`): User registration page
-- **Referral** (`/referral`): Referral program page
+### Colors
 
-## 🎬 Animations
+| Token | Value |
+| --- | --- |
+| Primary black | `#000000` |
+| White | `#FFFFFF` |
+| Electric green | `#0FFF67` |
+| Charcoal gray | `#1A1A1A` |
+| Slate gray | `#808080` |
 
-- Scroll-triggered fade-in animations
-- Hover effects on interactive elements
-- Magnetic cursor effects
-- Staggered element reveals
-- Smooth page transitions
+### Typography
 
-## 📱 Responsive Breakpoints
+The global stylesheet loads Inter for body text, Space Grotesk for display text, and JetBrains Mono for monospace text. Font variables and utility classes are defined in `app/globals.css` and `tailwind.config.ts`.
 
-- **Mobile**: < 768px
-- **Tablet**: 768px - 1024px
-- **Desktop**: 1024px - 1440px
-- **Large Desktop**: > 1440px
+### Glass effects
 
-## 🚀 Deployment
+The shared `.glass` and `.glass-strong` classes use translucent white backgrounds, a 20–30px backdrop blur, and green borders. The stylesheet also defines a stronger `.glass-premium` variant.
 
-Build for production:
+### Responsive behavior and animation
+
+Tailwind responsive utilities control page layouts and spacing. The custom cursor is enabled at desktop widths of 768px and above. Components use scroll-triggered reveals, hover effects, and staggered animations.
+
+## Customization
+
+- **Colors and theme:** edit `tailwind.config.ts` and the shared styles in `app/globals.css`.
+- **Fonts and glass effects:** update the font imports, CSS variables, and utility classes in `app/globals.css`.
+- **Homepage sections:** add components in `components/home/` and import them in `app/page.tsx`.
+- **Animations:** adjust Framer Motion properties in the relevant component.
+- **Images and copy:** replace placeholder material and update page components before deployment.
+
+## Production build
+
 ```bash
 npm run build
-```
-
-Start production server:
-```bash
 npm start
 ```
 
-Deploy to Vercel:
-```bash
-vercel
-```
+A Vercel deployment can be configured from the repository or through the Vercel CLI. Deploying the frontend does not implement the account, contact, or referral backends described above.
 
-## 📝 Notes
-
-- All images are placeholders - replace with actual images
-- Form submissions need backend integration
-- Authentication logic needs to be implemented
-- Referral system needs backend support
-
-## 🎨 Customization
-
-### Changing Colors
-Edit `tailwind.config.ts` to modify the color palette.
-
-### Adding Sections
-Create new components in `components/home/` and import them in `app/page.tsx`.
-
-### Modifying Animations
-Adjust animation parameters in component files using Framer Motion.
-
-## 📄 License
+## License
 
 This project is proprietary and confidential.
 
 ---
 
-Built with ❤️ for WasabiAI
-# wasabiai
+Built for WasabiAI.
